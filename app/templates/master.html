@@ -1,0 +1,179 @@
+{% load static%}
+<!doctype html>
+<html lang="zxx">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>{% block title %} {% endblock %}</title>
+    <link rel="icon" href="../static/img/favicon.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+    <!-- animate CSS -->
+    <link rel="stylesheet" href="../static/css/animate.css">
+    <!-- owl carousel CSS -->
+    <link rel="stylesheet" href="../static/css/owl.carousel.min.css">
+    <!-- font awesome CSS -->
+    <link rel="stylesheet" href="../static/css/all.css">
+    <!-- flaticon CSS -->
+    <link rel="stylesheet" href="../static/css/flaticon.css">
+    <link rel="stylesheet" href="../static/css/themify-icons.css">
+    <!-- font awesome CSS -->
+    <link rel="stylesheet" href="../static/css/magnific-popup.css">
+    <!-- swiper CSS -->
+    <link rel="stylesheet" href="../static/css/slick.css">
+    <!-- style CSS -->
+    <link rel="stylesheet" href="../static/css/style.css">
+
+    <!-- social sharing  -->
+
+
+    <link rel="shortcut icon" href="../static/img/Zeepit Final-06.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="../static/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="../static/css/jssocials.css" />
+    <link rel="stylesheet" type="text/css" href="../static/css/jssocials-theme-classic.css" />
+
+
+
+
+</head>
+<style>
+    /* width */
+    
+     ::-webkit-scrollbar {
+        width: 10px;
+    }
+    /* Track */
+    
+     ::-webkit-scrollbar-track {
+        /* background: #f1f1f1; */
+        background: black;
+    }
+    /* Handle */
+    
+     ::-webkit-scrollbar-thumb {
+        /* background: #888; */
+        background: white;
+    }
+    /* Handle on hover */
+    
+     ::-webkit-scrollbar-thumb:hover {
+        background: royalblue;
+        /* background: #555; */
+    }
+    
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: "montserrat", sans-serif;
+    }
+    
+    .fw-bold {
+        font-weight: bold;
+    }
+    
+    .testimonials {
+        margin-top: 100px;
+        margin-left: 200px;
+        padding: 30px 0;
+        background: #5390cc;
+        /* {% comment %} background: #f1f1f1; {% endcomment %} */
+        color: #434343;
+        text-align: center;
+        border-bottom-left-radius: 350px;
+        border-top-left-radius: 350px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    }
+    
+    .inner {
+        max-width: 1200px;
+        margin: auto;
+        overflow: hidden;
+        padding: 0 20px;
+    }
+    
+    .border {
+        width: 160px;
+        height: 5px;
+        background: white;
+        /* {% comment %} background: #6ab04c; {% endcomment %} */
+        margin: 26px auto;
+    }
+    
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .col {
+        flex: 33.33%;
+        /* max-width: 31.33%; */
+        box-sizing: border-box;
+        padding: 15px;
+    }
+    
+    .testimonial {
+        background: #fff;
+        padding: 40px;
+        border-radius: 19px;
+        height: 90vh;
+        margin-bottom: 30px;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    }
+    
+    .testimonial img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+    }
+    
+    .name {
+        font-size: 20px;
+        text-transform: uppercase;
+        margin: 20px 0;
+    }
+    
+    .stars {
+        color: #6ab04c;
+        margin-bottom: 20px;
+    }
+    
+    @media screen and (max-width:960px) {
+        .col {
+            flex: 100%;
+            max-width: 80%;
+        }
+        .testimonials,
+        .testimonial {
+            margin-top: 0;
+            margin-left: 0;
+            height: auto !important;
+        }
+        .section_padding {
+            padding: 0 !important;
+        }
+    }
+    
+    @media screen and (max-width:600px) {
+        .col {
+            flex: 100%;
+            max-width: 100%;
+        }
+        .testimonials,
+        .testimonial {
+            margin-top: 0;
+            margin-left: 0;
+            height: auto !important;
+        }
+        .section_padding {
+            padding: 0 !important;
+        }
+    }
+</style>
+
+
+
+{% block navbar %} {% include 'navbar.html' %} {% endblock %} {% block body %} {% endblock %} {% block script %} {% endblock script %} {% block footer%} {% include 'footer.html' %} {% endblock %}

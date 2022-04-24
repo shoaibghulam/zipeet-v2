@@ -1,0 +1,141 @@
+{% extends 'master.html' %} {% load static %} {% block body %}
+<!-- <div class="container  align-self-center">
+    <div class="col-md-6 m-auto">
+        <h1></h1><br>
+        <form action="/serviceprovideraccount" method="POST">
+            {% csrf_token %}
+            <label for="email">Company Name</label>
+            <input type="text" name="Company_Account_Name" class="form-control" placeholder="Enter First name" required>
+
+            <label for="email"> Company Email</label>
+            <input type="email" name="Company_Account_Email" class="form-control" placeholder="Enter email" required>
+
+            <label for="pwd">Password:</label>
+            <input type="password" name="password" class="form-control" placeholder="Enter password" required>
+
+            <label for="pwd"> Comapny Address:</label>
+            <input type="text" name="Company_Adress" class="form-control" placeholder="Enter Address" required>
+
+            <label for="pwd">Whatsapp No :</label>
+            <input type="text" name="Company_Whatsapp_No" class="form-control" placeholder="Whatsapp Number" required>
+
+            <label for="pwd">Contact Number:</label>
+            <input type="text" name="Contact" class="form-control" placeholder="Phone Number" required>
+
+            <label for="pwd">Location:</label>
+            <input type="text" name="Company_Location" class="form-control" placeholder=" Location" required><br>
+
+
+
+
+
+            <label for="pwd">Company Logo:</label><br>
+            <input type="file" name="Company_Account_logo" class="form-control" required accept="image/*"><br>
+            <label for="pwd"> Comapny Description:</label>
+            <textarea rows="2" name="Company_Account_Desc" class="form-control" placeholder="Desciption" required></textarea> -->
+<!-- <label for="cars">Choose a car:</label>
+
+            <select name="cars" id="cars" class="form-control">
+                <option value="volvo">Volvo</option>
+                <option value="saab">Saab</option>
+                <option value="mercedes">Mercedes</option>
+                <option value="audi">Audi</option>
+                </select>
+
+            <br> -->
+
+<!-- <button type="submit" class="btn btn-primary">Signup</button><br><br>
+            <label for="pwd">Do You Have an Already account here?</label>
+            <a class="lost_pass" href="serviceproviderlogin">Login Here</a> -->
+<!-- <a href="serviceproviderlogin"> <button type="button" class="btn btn-primary"> Login</button></a><br><br> -->
+<!-- <br>
+        </form>
+    </div>
+</div> -->
+
+{% for message in messages %}
+<div class="alert alert-{{message.tags}} mb-0 alert-dismissible fade show" role="alert">
+    <strong>Message:</strong> {{message}}
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+</div>
+{% endfor %}
+<section class="login_part section_padding">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <div class="login_part_text text-center">
+                    <div class="login_part_text_iner">
+                        <h2>New to our Shop?</h2>
+                        <p class="text-justify">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has
+                            survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more
+                            recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                        </p>
+                        <a href="serviceproviderlogin" class="btn_3">Login </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="login_part_form">
+                    <div class="login_part_form_iner">
+                        <h3 class="mb-3">Create Your Company Account Here...</h3>
+                        <form action="/serviceprovideraccount" method="POST" enctype="multipart/form-data">
+                            {% csrf_token %}
+                            <label class="my-2" for="email">Company Name</label>
+                            <input type="text" name="Company_Account_Name" class="form-control" placeholder="Enter First name" required>
+
+                            <label class="my-2" for="email"> Company Email</label>
+                            <input type="email" name="Company_Account_Email" class="form-control" placeholder="Enter email" required>
+
+                            <label class="my-2" for="pwd">Password</label>
+                            <input type="password" name="password" class="form-control" placeholder="Enter password" required>
+
+                            <label class="my-2" for="pwd"> Comapny Address</label>
+                            <input type="text" name="Company_Adress" class="form-control" placeholder="Enter Address" required>
+
+                            <label class="my-2" for="pwd">Whatsapp No</label>
+                            <input type="text" name="Company_Whatsapp_No" class="form-control" placeholder="Whatsapp Number" required>
+
+                            <label class="my-2" for="pwd">Contact Number</label>
+                            <input type="text" name="Contact" class="form-control" placeholder="Phone Number" required>
+
+                            <label class="my-2" for="pwd">Location</label>
+                            <input type="text" name="Company_Location" class="form-control" placeholder=" Location" required>
+
+                            <label class="my-2" for="pwd">Category</label><br>
+                            <label class="radio-inline"><br>
+                                <input type="radio" name="Service_Category" value="product" checked>Product Sales
+                              </label><br>
+                            <label class="radio-inline">
+                                <input type="radio" name="Service_Category" value="service">Service
+                              </label><br>
+                            <label class="radio-inline">
+                                <input type="radio" name="Service_Category" value="jobs">Job
+                              </label><br>
+                            <label class="my-2" for="pwd">Company Logo</label><br>
+                            <input type="file" name="Company_Account_logo" class="form-control" required>
+
+                            <label class="my-2" for="pwd"> Comapny Description</label>
+                            <textarea rows="2" name="Company_Account_Desc" class="form-control" placeholder="Desciption" required></textarea>
+
+                            <button type="submit" class="btn btn-primary my-2">Signup</button><br><br>
+                            <label class="my-2" for="pwd">Do You Have an Already account here?</label>
+                            <a class="lost_pass" href="serviceproviderlogin">Login Here</a>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<script>
+    if (window.history.replaceState) {
+        window.history.replaceState(null, null, window.location.href);
+    }
+</script>
+{% endblock %}

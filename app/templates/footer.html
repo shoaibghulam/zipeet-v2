@@ -1,0 +1,283 @@
+{% load static %}
+
+<div class="testimonials">
+    <div class="inner">
+        <h1 class='fw-bold'>Testimonials</h1>
+        <div class="border"></div>
+
+        <div class="row">
+            <div class="col">
+                <div class="testimonial">
+                    <img src="../static/img/blog/c1.png" alt="testimonial">
+                    <div class="name">John Micheal</div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+
+                    <p>
+                        At First, I wasn't sure whethter any of my photos were good enough in comparison to the other photos I saw on the site, but I uploaded a few anyway. I was quite starteld to see how many views and downlaods my first uploads got in their first 24 hours
+                        on Zipeet
+                    </p>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="testimonial">
+                    <img src="../static/img/blog/c2.png" alt="testimonial">
+                    <div class="name">Robert Elbert</div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+
+                    <p>
+                        Derek was brilliant! We were looking to re-brand our business with a more up to date logo & Derek certainly delivered on that. Everything that we asked came through above & beyond our expectations. Would definitely recommend to anyone if they are looking
+                        for a professional experience from start to finish.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="testimonial">
+                    <img src="../static/img/blog/c3.png" alt="testimonial">
+                    <div class="name">Charlie</div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+
+                    <p>
+                        Great service ! My design manager Derek has been very helpful with my project. Patient with my requests and always happy and keen to make the changes I want. Gone step further but suggestion ideas and designs so overall I’m very impressed. Like to thank
+                        all the creative designers along with Derek for helping me with my project.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--::footer_part start::-->
+<footer class="footer_part pt-5 pb-4">
+    <div class="container">
+        <div class="row justify-content-between">
+            <div class="col-sm-6 col-lg-2">
+                <div class="single_footer_part">
+                    <h4>Category</h4>
+                    <ul class="list-unstyled">
+                        {% for nav in navbar %}
+                        <li><a class="" href="/category/{{nav.cid}}">{{nav.cname}}</a></li> {% endfor %}
+
+                        <!-- <li><a href="#">Male</a></li>
+                        <li><a href="#">Women</a></li>
+                        <li><a href="#">Homeuse</a></li> -->
+                    </ul>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-2">
+                <div class="single_footer_part">
+                    <h4>Jobs</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="">Web Developer</a></li>
+                        <li><a href="">Django Programmer</a></li>
+                        <li><a href="">Network/Cloud Architure</a></li>
+                        <li><a href="">Graphic Designer</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-2">
+                <div class="single_footer_part">
+                    <h4>Company</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="">About</a></li>
+                        <li><a href="">News</a></li>
+                        <li><a href="">FAQ</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- <div class="col-sm-6 col-lg-3">
+                <div class="single_footer_part">
+                    <h4>Address</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Faisal Avenue G8 Islamabad</a></li>
+                        <li><a href="#">00923449621466</a></li>
+                        <li><span>zipeetonline@gmail.com</span></li>
+                    </ul>
+                </div>
+            </div> -->
+            <div class="col-sm-6 col-lg-4">
+                <div class="single_footer_part">
+                    <h4>Newsletter</h4>
+                    <div id="mc_embed_signup">
+                        <!-- <div class="col-sm-6 col-lg-4"> -->
+                        <div class="single_footer_part">
+                            <h4 class="mb-14">Address </h4>
+                            <ul class="list-unstyled">
+                                <li><a>Boulevard Plaza Downtown Dubai, UAE.</a></li>
+                                <li><a href="tel:0097156 772 3651">0097156 772 3651</a></li>
+                                <li><span><a href='mailto:zipeetonline@gmail.com'> zipeetonline@gmail.com </a></span></li>
+                            </ul>
+                        </div>
+                        <!-- </div> -->
+                    </div>
+                    <div class="social_icon">
+                        <a href="https://www.facebook.com/Zipeetcom-104518318040837/" target="_blank"><i class="ti-facebook"></i></a>
+                        <a href="https://twitter.com/ZipeetC?s=08" target="_blank"><i class="ti-twitter-alt"></i></a>
+                        <a href="https://Instagram.com/zipeetonline" target="_blank"><i class="ti-instagram"></i></a>
+                        <a href="https://www.youtube.com/channel/UCZu-kYlR0vIhlFaWujmR57A" target="_blank"><i class="ti-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="d-flex my-4" style="border: 1px solid #333333;"></div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-12">
+
+                <div class="copyright_text text-white">
+                    <P>
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        Copyright &copy;
+                        <script>
+                            document.write(new Date().getFullYear());
+                        </script> All rights reserved  by <a href="https://designiro.com" target="_blank">Designiro</a>
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    </P>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+</footer>
+<!--::footer_part end::-->
+
+
+
+<!-- jquery plugins here-->
+
+
+
+
+
+
+<script src="{% static ''%}js/jquery-1.12.1.min.js"></script>
+<!-- popper js -->
+<script src="{% static ''%}js/popper.min.js"></script>
+<!-- bootstrap js -->
+<script src="{% static ''%}js/bootstrap.min.js"></script>
+<!-- easing js -->
+<script src="{% static ''%}js/jquery.magnific-popup.js"></script>
+<!-- swiper js -->
+<script src="{% static ''%}js/swiper.min.js"></script>
+<!-- swiper js -->
+<script src="{% static ''%}js/mixitup.min.js"></script>
+<!-- particles js -->
+<script src="{% static ''%}js/owl.carousel.min.js"></script>
+<script src="{% static ''%}js/jquery.nice-select.min.js"></script>
+<!-- slick js -->
+<script src="{% static ''%}js/slick.min.js"></script>
+<script src="{% static ''%}js/jquery.counterup.min.js"></script>
+<script src="{% static ''%}js/waypoints.min.js"></script>
+<script src="{% static ''%}js/contact.js"></script>
+<script src="{% static ''%}js/jquery.ajaxchimp.min.js"></script>
+<script src="{% static ''%}js/jquery.form.js"></script>
+<script src="{% static ''%}js/jquery.validate.min.js"></script>
+<script src="{% static ''%}js/mail-script.js"></script>
+<script>
+    $('.owl-carousel').owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: true,
+        navText: false,
+        autoplay: true,
+        autoplayHoverPause: true,
+        responsive: {
+            0: {
+                items: 2
+            },
+            600: {
+                items: 3
+            },
+            1000: {
+                items: 5
+            }
+        }
+    });
+    var owl = $('.owl-carousel');
+    owl.owlCarousel();
+    $('#slider-right').click(function() {
+
+        owl.trigger('next.owl.carousel');
+    });
+    // Go to the previous item
+    $('#slider-left').click(function() {
+        // With optional speed parameter
+        // Parameters has to be in square bracket '[]'
+        owl.trigger('prev.owl.carousel', [300]);
+    });
+    var i = 0;
+    $('.gallery-item').hover(function() {
+        $(this).find('.img-title').fadeIn(300);
+    }, function() {
+        $(this).find('.img-title').fadeOut(100);
+    });
+    if (localStorage.getItem('cart') == null) {
+        var cart = {}
+    } else {
+        cart = JSON.parse(localStorage.getItem('cart'));
+
+    }
+    $('.cart').click(function() {
+        var cartid = this.id.toString();
+        if (cart[cartid] != undefined) {
+            cart[cartid] = cart[cartid] + 1;
+            i = Object.keys(cart).length;
+
+
+
+        } else {
+            cart[cartid] = 1;
+            i = Object.keys(cart).length;
+
+        }
+        localStorage.setItem('cart', JSON.stringify(cart));
+        console.log(cart);
+        document.getElementById('cart').innerHTML = i;
+
+
+    });
+</script>
+
+
+<!-- custom js -->
+<script src="{% static ''%}js/custom.js"></script>
+
+<script src="../static/js/jquery-1.12.1.min.js"></script>
+<!-- <script src="../static/js/jaq.js"></script> -->
+<script src="../static/js/jssocials.min.js"></script>
+<script>
+    $("#share").jsSocials({
+        url: "http://www.zipeet.com",
+        text: "Best E-commerce website Zipeet",
+        showLabel: false,
+        showCount: false,
+        shares: ["email", "twitter", "facebook", "googleplus", "linkedin", "whatsapp"]
+    });
+</script>
+</body>
+
+</html>

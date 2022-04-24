@@ -1,0 +1,198 @@
+{% extends 'master.html' %} {% load static %} 
+
+{% block title %}Product Views{% endblock title %}
+{% block body %}
+<style>
+    
+  { border-radius: 50%; }
+   
+
+</style>
+<!-- breadcrumb start-->
+<section class="breadcrumb breadcrumb_bg">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-12">
+                <div class="breadcrumb_iner">
+                    <div class="breadcrumb_iner_item">
+                        <p>Home/Shop/Single product</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- breadcrumb start-->
+{% for product in product %}
+
+<!--================Single Product Area =================-->
+<div class="product_image_area section_padding">
+    <div class="container">
+        <div class="row s_product_inner">
+            <div class="col-lg-5">
+                <div class="product_slider_img">
+                    <div id="vertical">
+                        <div data-thumb="/uploads/{{product.image}}">
+                            <img src="/uploads/{{product.image}}" height="475px" width="500px" />
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5 offset-lg-1">
+                <div class="s_product_text">
+                    <h3>{{product.name}}<br>
+
+                    </h3>
+                    <h2>{{product.price}} AED</h2>
+                    <ul class="list">
+                        <li>
+                            <a class="active" href="/category/{{product.category_id}}">
+                                <span>Category</span> : {{product.category}}</a>
+                        </li>
+                        <li>
+                            <a href="#"> <span>Availibility</span> : {{product.stock}}</a>
+                        </li>
+                    </ul>
+                    <form action="/checkout/{{product.pid}}" method="GET">
+
+                        <div class="card_area">
+                            <div class="product_count d-inline-block">
+                                <span class="inumber-decrement"> <i class="ti-minus"></i></span>
+                                <input class="input-number" type="text" value="1" min="0" max="10" name="quantity">
+                                <span class="number-increment"> <i class="ti-plus"></i></span>
+                            </div>
+                            <div class="add_to_cart">
+                                <!-- <a href="/checkout/{{product.pid}}" class="btn_3 cart">Checkout</a> -->
+                                <button type="submit" class="btn_3 cart">Checkout</button>
+                                {% comment %} <a href="#" class="like_us"> <i class="ti-heart"></i> </a> {% endcomment %}
+                            </div>
+                            <div class="social_icon">
+                                {% comment %} <a href="https://www.facebook.com/Zipeetcom-104518318040837/" target="_blank" class="fb"><i class="ti-facebook"></i></a>
+                                <a href="https://twitter.com/ZipeetC?s=08" target="_blank" class="tw"><i class="ti-twitter-alt"></i></a>
+                                <a href="https://Instagram.com/zipeetonline" target="_blank" class="li"><i class="ti-linkedin"></i></a>
+                                <div id="share{{product.pid}}"></div> {% endcomment %}
+                            </div>
+                            <h4>Share with</h4>
+                        <div id="share"></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--================End Single Product Area =================-->
+
+<!--================Product Description Area =================-->
+<section class="product_description_area">
+    <div class="container">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link" id="home-tab" data-toggle="tab" href="/" role="tab" aria-controls="home" aria-selected="true">Description</a>
+            </li>
+
+        </ul>
+        <div class="tab-content" id="myTabContent">
+            <div aria-labelledby="home-tab">
+                <p>
+                    {{product.description}}
+
+                </p>
+
+            </div>
+
+
+
+        </div>
+    </div>
+</section>
+{% endfor %}
+<!--================End Product Description Area =================-->
+
+<!-- product_list part start-->
+<!-- free shipping here -->
+<section class="shipping_details section_padding">
+    <div class="container py-4 mt-5">
+        <div class="row">
+            <div class="col-lg-3 col-sm-6">
+                <div class="single_shopping_details">
+                    <img src="{% static ''%}img/icon/icon_1.png" alt="">
+                    <h4>Free shipping</h4>
+                    <p>Divided face for bearing the divide unto seed winged divided light Forth.</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="single_shopping_details">
+                    <img src="{% static ''%}img/icon/icon_2.png" alt="">
+                    <h4>Free shipping</h4>
+                    <p>Divided face for bearing the divide unto seed winged divided light Forth.</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="single_shopping_details">
+                    <img src="{% static ''%}img/icon/icon_3.png" alt="">
+                    <h4>Free shipping</h4>
+                    <p>Divided face for bearing the divide unto seed winged divided light Forth.</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="single_shopping_details">
+                    <img src="{% static ''%}img/icon/icon_4.png" alt="">
+                    <h4>Free shipping</h4>
+                    <p>Divided face for bearing the divide unto seed winged divided light Forth.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- free shipping end -->
+
+<!-- subscribe_area part start-->
+<section class="instagram_photo">
+    <div class="container-fluid">
+            <div class=" row ">
+                <div class="col-lg-12 ">
+                    <div class="instagram_photo_iner ">
+                        <div class="single_instgram_photo ">
+                            <img src="{% static ''%}img/instagram/inst_1.png " alt=" ">
+                            <a href="# "><i class="ti-instagram "></i></a> 
+                        </div>
+                        <div class="single_instgram_photo ">
+                            <img src="{% static ''%}img/instagram/inst_2.png " alt=" ">
+                            <a href="# "><i class="ti-instagram "></i></a> 
+                        </div>
+                        <div class="single_instgram_photo ">
+                            <img src="{% static ''%}img/instagram/inst_3.png " alt=" ">
+                            <a href="# "><i class="ti-instagram "></i></a> 
+                        </div>
+                        <div class="single_instgram_photo ">
+                            <img src="{% static ''%}img/instagram/inst_4.png " alt=" ">
+                            <a href="# "><i class="ti-instagram "></i></a> 
+                        </div>
+                        <div class="single_instgram_photo ">
+                            <img src="{% static ''%}img/instagram/inst_5.png " alt=" ">
+                            <a href="# "><i class="ti-instagram "></i></a> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+       
+   
+    </section> 
+
+   
+
+    {% comment %} <!--::subscribe_area part end: {% endcomment %}
+<script>
+    if (window.history.replaceState) {
+        window.history.replaceState(null, null, window.location.href);
+    }
+</script>
+
+
+
+
+</script>
+{% endblock %}

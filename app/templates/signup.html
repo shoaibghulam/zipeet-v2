@@ -1,0 +1,69 @@
+{% extends 'master.html' %} {% load static %} 
+
+
+{% block title %}Create New Account | Zipeet{% endblock title %}
+
+{% block body %} {% for message in messages %}
+
+
+
+<div class="alert alert-{{message.tags}} mb-0 alert-dismissible fade show" role="alert">
+    <strong>Message:</strong> {{message}}
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+</div>
+{% endfor %}
+<section class="login_part section_padding">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <div class="login_part_text text-center">
+                    <div class="login_part_text_iner">
+                        <h2>New to our Shop?</h2>
+                        <p class="text-justify">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has
+                            survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more
+                            recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                        </p>
+                        <a href="/login" class="btn_3">Login</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="login_part_form">
+                    <div class="login_part_form_iner">
+                        <h3 class="mb-3">Create Your User Account Here...</h3>
+                        <form action="/signup" method="POST">
+                            {% csrf_token %}
+                            <label for="email">First Name</label>
+                            <input type="text" name="fname" class="form-control" placeholder="Enter First name">
+                            <label for="email">Last Name</label>
+                            <input type="text" name="lname" class="form-control" placeholder="Enter Last name">
+                            <label for="email">Email</label>
+                            <input type="email" name="email" class="form-control" placeholder="Enter email">
+                            <label for="pwd">Password</label>
+                            <input type="password" name="password" class="form-control" placeholder="Enter password">
+                            <label for="pwd">Contact Number</label>
+                            <input type="text" name="Contact_No" class="form-control" placeholder="Enter Contact Number">
+                            <label for="pwd">Whatsapp Number</label>
+                            <input type="text" name="Whatsapp_No" class="form-control" placeholder="Enter Whatsapp Number">
+                            <label for="pwd">Location</label>
+                            <input type="text" name="Location" class="form-control" placeholder="Enter Location">
+
+                            <br>
+
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+    if (window.history.replaceState) {
+        window.history.replaceState(null, null, window.location.href);
+    }
+</script>
+{% endblock %}

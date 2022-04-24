@@ -1,0 +1,200 @@
+{% extends 'master.html' %} {% load static %} 
+
+
+
+{% block title %}All Services | Zipeet{% endblock title %}
+
+{% block body %}
+
+<!-- search box -->
+<br><br>
+<div class="container">
+    <div class="col-lg-12">
+
+        <form class="form-horizontal" action="/allservices" method="POST">
+            {% csrf_token %}
+            <div class="form-group row">
+
+                <div class="col-md-5">
+                    <input type="text" class="form-control ui-autocomplete-input" placeholder="Service Name" name="service" id="txtsearch1">
+
+                </div>
+
+                <div class="col-md-5">
+                    <input type="textsds" class="form-control ui-autocomplete-input" placeholder="Location" name="location" id="txtsearch">
+                </div>
+
+
+                <div class="col-md-1">
+                    <input type="Submit" class="btn btn-primary" value="Search" name="">
+                </div>
+            </div>
+        </form>
+
+    </div>
+
+</div>
+
+
+<!-- end search box -->
+
+<!-- upcoming_event part start-->
+
+<!-- new arrival part here -->
+<section class="new_arrival section_padding">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-8">
+                <div class="arrival_tittle">
+                    <h2>All Services</h2>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-12">
+                <div class="new_arrival_iner ">
+                    <div class="float-left">
+                        {% for productArrivel in allservice %}
+                        {% comment %} <div class="col-md-3 col-sm-6 float-left"> {% endcomment %}
+                        <div class="col-md-3  float-left">
+                            <div class="single_arrivel_item">
+                                <a href="/serviceview/{{productArrivel.Service_id}}">
+                                    <img src="/uploads/{{productArrivel.Service_Image}}" alt="#" class="arrivel-img">
+                                    <div class="hover_text">
+
+
+                                        <h5>{{productArrivel.Service_Name}}</h5>
+
+
+                                        <h5>{{productArrivel.Company_Account_Id.Company_Whatsapp_No}}</h5>
+                                </a>
+                                <div class="social_icon">
+                                    <!-- <a href="#"><i class="ti-heart"></i></a> -->
+                                    <!-- <a href="/addtocart/{{productArrivel.pid}}"><i class="ti-bag"></i></a> -->
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+    </div>
+</section>
+<!-- new arrival part end -->
+
+<!-- free shipping here -->
+<!-- free shipping here -->
+<section class="shipping_details section_padding">
+    <div class="container py-4 mt-5">
+        <div class="row">
+            <div class="col-lg-3 col-sm-6">
+                <div class="single_shopping_details">
+                    <img src="{% static ''%}img/icon/icon_1.png" alt="">
+                    <h4>Free shipping</h4>
+                    <p>Divided face for bearing the divide unto seed winged divided light Forth.</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="single_shopping_details">
+                    <img src="{% static ''%}img/icon/icon_2.png" alt="">
+                    <h4>Free shipping</h4>
+                    <p>Divided face for bearing the divide unto seed winged divided light Forth.</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="single_shopping_details">
+                    <img src="{% static ''%}img/icon/icon_3.png" alt="">
+                    <h4>Free shipping</h4>
+                    <p>Divided face for bearing the divide unto seed winged divided light Forth.</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="single_shopping_details">
+                    <img src="{% static ''%}img/icon/icon_4.png" alt="">
+                    <h4>Free shipping</h4>
+                    <p>Divided face for bearing the divide unto seed winged divided light Forth.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- free shipping end -->
+
+<!-- subscribe_area part start-->
+<section class="instagram_photo">
+    <div class="container-fluid>
+            <div class=" row ">
+                <div class="col-lg-12 ">
+                    <div class="instagram_photo_iner ">
+                        <div class="single_instgram_photo ">
+                            <img src="{% static ''%}img/instagram/inst_1.png " alt=" ">
+                            <a href="# "><i class="ti-instagram "></i></a> 
+                        </div>
+                        <div class="single_instgram_photo ">
+                            <img src="{% static ''%}img/instagram/inst_2.png " alt=" ">
+                            <a href="# "><i class="ti-instagram "></i></a> 
+                        </div>
+                        <div class="single_instgram_photo ">
+                            <img src="{% static ''%}img/instagram/inst_3.png " alt=" ">
+                            <a href="# "><i class="ti-instagram "></i></a> 
+                        </div>
+                        <div class="single_instgram_photo ">
+                            <img src="{% static ''%}img/instagram/inst_4.png " alt=" ">
+                            <a href="# "><i class="ti-instagram "></i></a> 
+                        </div>
+                        <div class="single_instgram_photo ">
+                            <img src="{% static ''%}img/instagram/inst_5.png " alt=" ">
+                            <a href="# "><i class="ti-instagram "></i></a> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+       
+   
+    </section> 
+    <!--::subscribe_area part end:
+<!-- free shipping end -->
+
+<!-- subscribe_area part start-->
+
+<!--::subscribe_area part end::-->
+
+</section>
+
+{% endblock %} {% block script %}
+
+<script>
+    { %
+        if Thank %
+    }
+    alert('{{msg}}') { % endif %
+    }
+</script>
+<script>
+    if (window.history.replaceState) {
+        window.history.replaceState(null, null, window.location.href);
+    }
+</script>
+
+{% endblock script %}
